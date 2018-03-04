@@ -1,0 +1,5 @@
+name: 'Cheap Advisor'
+type: module
+description: 'Cheap Advisor base module'
+core: 8.x
+package: 'CheapAdvisor'

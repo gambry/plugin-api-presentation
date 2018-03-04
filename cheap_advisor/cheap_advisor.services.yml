@@ -1,0 +1,4 @@
+services:
+  plugin.manager.city_widget:
+    class: Drupal\cheap_advisor\Plugin\CityWidgetManager
+    parent: default_plugin_manager

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains cheap_advisor.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cheap_advisor_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cheap_advisor module.
+    case 'help.page.cheap_advisor':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Cheap Advisor base module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

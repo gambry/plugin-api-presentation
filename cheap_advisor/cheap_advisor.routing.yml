@@ -1,0 +1,8 @@
+
+cheap_advisor.city_page_controller_pageContent:
+  path: '/city/{city}'
+  defaults:
+    _controller: '\Drupal\cheap_advisor\Controller\CityPageController::pageContent'
+    _title: 'pageTitle'
+  requirements:
+    _permission: 'access content'
