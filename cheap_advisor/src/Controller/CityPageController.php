@@ -58,8 +58,9 @@ class CityPageController extends ControllerBase {
    */
   public function pageContent($city) {
     $output = [];
-    /** @var \Drupal\cheap_advisor\Plugin\CityWidgetInterface $widget */
-    foreach ($this->pluginManagerCityWidget->getDefinitions() as $widget) {
+    foreach (array_keys($this->pluginManagerCityWidget->getDefinitions()) as $plugin_id) {
+      /** @var \Drupal\cheap_advisor\Plugin\CityWidgetInterface $widget */
+      $widget = $this->pluginManagerCityWidget->createInstance($plugin_id);
       $output[$widget->getPluginId()] = $widget->buildWidget($city);
     }
     return $output;
